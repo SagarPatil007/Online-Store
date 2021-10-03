@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Store</title>
+    <!-- Custom stsylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- bootstap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Sweet alert stylesheet -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FEATURES</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown" href="features.html" id="navbardrop" data-toggle="dropdown">
+                        COLLECTION
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="home.html">Home & Appliances</a>
+                        <a class="dropdown-item" href="Electronics.html">Electronics</a>
+                        <a class="dropdown-item" href="men.html">Men fashion</a>
+                        <a class="dropdown-item" href="women.html">Women fashion</a>
+                        <a class="dropdown-item" href="sport.html">Sports</a>
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item active" href="offer.html">Offer Zone</a>
+                    </div>
+                </li>
+                <!-- Dropdown close -->
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-white btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-white btn-outline-dark mx-2 my-sm-0" type="button" data-toggle="modal"
+                    data-target="#exampleModal">Sign In</button>
+                <!-- <button class="btn btn-white btn-outline-dark my-2 my-sm-0" type="submit"
+                    data-target="exampleModalLabel2" <i class="fas fa-shopping-cart"></i></button> -->
+                <button type="button" class="btn btn-white btn-outline-dark mx-2 my-sm-0" data-toggle="modal"
+                    data-target="#cart">
+                    <i class="fas fa-shopping-cart"></i> (<span class="total-count"></span>)
+            </form>
+        </div>
+    </nav>
+
+    <img src="./Assets/banner/6.PNG" alt="1" width="100%" height="100%" class="img-fluid">
+    <img src="./Assets/banner/7.PNG" alt="2" width="100%" height="100%" class="img-fluid">
+    <img src="./Assets/banner/8.PNG" alt="3" width="100%" height="100%" class="img-fluid">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title align-center" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-outline-primary">Submit</button>
+                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="container-fluid">
+        <footer class="footers responsive">
+            <div class="row">
+                <div class="col-12 col-md col-sm col-lg">
+                    <hr>
+                    <img class="mb-2" src="./Assets" alt="Logo" width="150" height="100" class="bg-white">
+                    <small class="d-block mb-3 text-muted">© 2017-2020</small>
+                </div>
+                <div class="col-6 col-md col-sm col-lg">
+                    <hr>
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small text-color-white">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Another one</a></li>
+                        <li><a class="text-muted" href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md col-sm col-lg">
+                    <hr>
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md col-sm col-lgs">
+                    <hr>
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <h5>
+                    <i class="fa fa-copyright " aria-hidden="true">
+                        copyright 2020 for Online Store.
+                    </i>
+                </h5>
+            </div>
+            <hr>
+            <hr>
+        </footer>
+    </div>
+
+
+     <!-- modal for cart -->
+     <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <table class="show-cart table">
+                 </table>
+                 <div class="text-right"><b>Total price: ₹</b><span class="total-cart"></span></div>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <button class="clear-cart btn btn-danger">Clear Cart</button>
+                 <a href="./chechoutfrom.html">
+                     <button type="button" class="btn btn-primary">Order now</button>
+                 </a>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/53dce8a43e.js" crossorigin="anonymous"></script>
+<script src="./js/style.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
